@@ -1,0 +1,60 @@
+\documentclass{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{tikz}
+\usepackage[european,cuteinductors,smartlabels]{circuitikz}
+\usepackage{booktabs}
+\usepackage{multicol}
+\usepackage{multirow}
+\title{Практическая работа №5}
+\author{студент:Лоскутов Д.А группы 8871 }
+% Конец преамбулы
+\begin{document}
+\maketitle
+Дана функция (ДНФ):
+$$
+F = AB\overline{C}\overline{D} + \overline{A}BC + \overline{D}
+$$
+
+\begin{tikzpicture}
+\draw[step=1cm] (0,0) grid (5,5);
+\filldraw[blue!40!white,draw=black] (0,0) rectangle (1,5) (0,5) rectangle (5,4)
+(0,0) grid (1,5) (0,5) grid (5,4); 
+\draw (0.5,4.5) node{\footnotesize AB/CD} (1.5,4.5) node{00} (2.5,4.5) node{01} (3.5,4.5) node{10} (4.5,4.5) node{11}
+(0.5,3.5) node{00} (0.5,2.5) node{01} (0.5,1.5) node{10} (0.5,0.5) node{11}
+(1.5,3.5) node{1} (1.5,2.5) node{1} (1.5,1.5) node{1} (1.5,0.5) node{1}
+(2.5,3.5) node{0} (2.5,2.5) node{0} (2.5,1.5) node{0} (2.5,0.5) node{0}
+(3.5,3.5) node{0} (3.5,2.5) node{1} (3.5,1.5) node{0} (3.5,0.5) node{0}
+(4.5,3.5) node{1} (4.5,2.5) node{1} (4.5,1.5) node{1} (4.5,0.5) node{1};
+\end{tikzpicture}
+
+\begin{table}[h] 
+\centering 
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|} 
+\hline 
+№ & A & B & C & D & AB\overline{C}\overline{D} & \overline{A}BC & F & СДНФ & СКНФ \\ 
+\hline 
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & \bar A\wedge \bar B \wedge \bar C \wedge\bar D & 0\\ 
+1 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & A\vee B\vee C\vee \bar D \\ 
+2 & 0 & 0 & 1 & 0 & 0 & 0 & 1 & \bar A\wedge \bar B\wedge C\wedge \bar D & 0\\ 
+3 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & A\vee B\vee \bar C\vee \bar D\\ 
+4 & 0 & 1 & 0 & 0 & 0 & 0 & 1 & \bar A \wedge B \wedge\bar C\wedge\bar D & 0\\ 
+5 & 0 & 1 & 0 & 1 & 0 & 0 & 0 & 0 & A\vee \bar B\vee C\vee \bar D\\ 
+6 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & \bar A\wedge B\wedge C \wedge \bar D & 0\\ 
+7 & 0 & 1 & 1 & 1 & 0 & 1 & 1 & \bar A\wedge B\wedge C \wedge D & 0\\ 
+8 & 1 & 0 & 0 & 0 & 0 & 0 & 1 & A\wedge \bar B \wedge \bar C \wedge \bar D & 0\\ 
+9 & 1 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & \bar A\vee B\vee C\vee \bar D\\ 
+10 & 1 & 0 & 1 & 0 & 0 & 0 & 1 & A\wedge \bar B\wedge C\wedge \bar D & 0\\ 
+11 & 1 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & \bar A\vee B\vee \bar C\vee \bar D\\ 
+12 & 1 & 1 & 0 & 0 & 1 & 0 & 1 & A\wedge B\wedge \bar C \wedge \bar D & 0\\ 
+13 & 1 & 1 & 0 & 1 & 0 & 0 & 0 & 0 & \bar A\vee \bar B\vee C\vee \bar D\\ 
+14 & 1 & 1 & 1 & 0 & 0 & 0 & 1 & A\wedge B\wedge C \wedge \bar D & 0\\ 
+15 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & \bar A\vee \bar B\vee \bar C\vee \bar D\\ 
+\hline 
+\end{tabular} 
+\end{table} 
+
+
+
+\end{document}
