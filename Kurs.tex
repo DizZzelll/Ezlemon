@@ -4,6 +4,9 @@
 \usepackage{mathtext}  
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
 \usepackage{indentfirst}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.9}
 \usepackage{geometry}
 \title{KURSACH XXX}
 \author{los.dimasya 8871}
@@ -32,10 +35,10 @@
 \chapter{Coderjanie}
 
 \begin{enumerate}
-\item\footnotesize {Даны функции $f(x) = \sqrt{3}sin(x) + cos(x)$ и $g(x) = cos(2*x + pi/3) - 1$\\
+\item\footnotesize {Даны функции $f(x) = \sqrt{3}sin(x) + cos(x)$ и $g(x) = cos(2x + \pi/3) - 1$\\
 a)	Решить уравнение $f(x) = g(x)$.\\
 b)	Исследовать функцию $h(x) = f(x) - g(x)$ на промежутке $[0 ; (5*pi)/6]$}\\
-\item Найти коэффициенты кубического сплайна, интерполирующего данные, представленные в векторах Vx и Vy (смотри приложение 1). \\
+\item Найти коэффициенты кубического сплайна, интерполирующего данные, представленные в векторах Vx и Vy. \\
 Построить на одном графике: функцию f(x) и функцию f1(x), получен-ную после нахождения коэффициентов кубического сплайна.\\
 Представить графическое изображение результатов интерполяции ис-ходных данных различными методами с использованием встроенных функ-ций:\\
 $cspline(Vx,Vy), pspline(Vx,Vy), lspline(Vx,Vy)$ и $interp(Vk,Vx,Vy,x)$.
@@ -47,6 +50,57 @@ $cspline(Vx,Vy), pspline(Vx,Vy), lspline(Vx,Vy)$ и $interp(Vk,Vx,Vy,x)$.
 
 \newpage
 
+\textbf{Список обозначений и сокращений.\\[0.4cm]}
 
+\textbf{x} - аргумент\\[0.4cm]
+
+\textbf{f(x)} - функция f(x)\\[0.4cm]
+
+\textbf{g(x)} - функция g(x)\\[0.4cm]
+
+\textbf{h(x)} - функция h(x)\\[0.4cm]
+
+\textbf{$\frac{d}{dx}*h(x)$} - первая производная функции h(x)\\[0.4cm]
+
+\textbf{$\frac{d^2}{dx^2}*h(x)$} - вторая производная функции h(x)\\[0.4cm]
+
+\textbf{Vx, Vy} - векторы данных\\[0.4cm]
+
+\textbf{cspline, lspline, pspline} - функции, используемые для нахождения коэффициентов сплайна.\\[0.4cm]
+
+\textbf{f1(x)} - линейная интерполяция данных, представленных в векторах Vx и Vy\\[0.4cm]
+
+\textbf{П$_$j} - прибыль предприятия\\[0.4cm]
+
+\textbf{X} - Количество изделий j-го наименования, которое может производить предприятие\\[0.4cm]
+
+\textbf{X5, X6, X7} - фиктивные изделия, при изготовлении которых используют каждый оставшийся вид ресурса.\\[0.4cm]
+
+\newpage
+
+\chapter{Выполнение 1 задания}
+
+\section{Решение уравнения f(x) = g(x)}
+
+\fbox{$f(x) := \sqrt{3}sin(x) + cos(x)$}\\
+\fbox{$g(x) := cos(2x + \pi/3) - 1$}\\[0.4cm]
+\fbox{$f(x) = g(x)$}\\[1cm]
+\fbox{$f(x) = g(x) solve,x -> \begin{bmatrix}
+\frac{-2\pi}{3} + 2 \pi k \\
+\frac{-\pi}{6} + 2 \pi k\\
+\frac{5\pi}{6} + 2 \pi k  
+\end{bmatrix} $}\\[2cm]
+
+Уравнение имеет решение при $x =\frac{-2\pi}{3} + 2 \pi k$, $x=\frac{-\pi}{6} + 2 \pi k$ , $x =\frac{5\pi}{6} + 2 \pi k $  .
+\newpage
+
+
+\begin{tikzpicture}
+\begin{axis}
+\addplot gnuplot  {1.7320508075688772935274463415059*sin(x)+cos(x)};
+\legend {F(x)}
+
+\end{axis}
+\end{tikzpicture}
 
 \end{document}
