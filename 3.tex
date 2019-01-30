@@ -10,20 +10,22 @@
 
 	
 	\begin{tikzpicture}
-	\begin{scope}[xscale=0.7,yscale=0.1]
+	\begin{scope}[xscale=2,yscale=0.2]
 	
-	\draw[thin, ->] (-10,0) -- (10,0) node[right] {$X$};
-	\draw[thin, ->] (0,-10) -- (0,10) node[left] {$Y$};
+	\draw[thin, ->] (0,0) -- (7,0) node[right] {$X$};
+	\draw[thin, ->] (0,0) -- (0,7) node[left] {$Y$};
 	
 	\foreach \x\xtext in
-	{-4/-4,4/4,-3/-3,3/3,-2/-2,2/2,-1/-1,1/1,4.15/4.15} %
+	{4/4,3/3,2/2,1/1,4.15/4.15} %
 	\draw (\x,0.1) -- (\x,-0.1) node[below] {$\xtext$};
 	
-	\draw[domain=3.5:4.4, smooth, red] plot ({\x},{((\x)*(\x)*(\x))-((\x)*(\x))-(8*(\x))-12});
-	\draw[domain=3.9:4.4, smooth, help lines, blue] plot ({\x},{(57*(\x))-237});
-	\draw[domain=3.5:4.4, smooth, help lines, black] plot ({\x},{(35.3675*(\x))-137.72425});
+	\draw[domain=3.5:5, smooth, red] plot ({\x},{((\x)*(\x)*(\x))-((\x)*(\x))-(8*(\x))-12});
+	\draw[domain=3.9:5, smooth, help lines, blue] plot ({\x},{(57*(\x))-237});
+	\draw[domain=3.5:4.531, smooth, help lines, black] plot ({\x},{(35.3675*(\x))-137.72425});
 
-	
+	\draw[thin, ->] (5,0) -- (5,47.8) ;
+	\draw[thin, ->] (4.15,0) -- (4.15,9) ;
+
 
 	\end{scope};
 	\end{tikzpicture}

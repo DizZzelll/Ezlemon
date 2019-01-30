@@ -1,4 +1,4 @@
-\documentclass{article}
+ \documentclass{article}
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[english,russian]{babel}
@@ -21,8 +21,8 @@ $$
 \draw[step=1cm] (0,0) grid (5,5);
 \filldraw[blue!40!white,draw=black] (0,0) rectangle (1,5) (0,5) rectangle (5,4)
 (0,0) grid (1,5) (0,5) grid (5,4); 
-\draw (0.5,4.5) node{\footnotesize AB/CD} (1.5,4.5) node{00} (2.5,4.5) node{01} (3.5,4.5) node{10} (4.5,4.5) node{11}
-(0.5,3.5) node{00} (0.5,2.5) node{01} (0.5,1.5) node{10} (0.5,0.5) node{11}
+\draw (0.5,4.5) node{\footnotesize AB/CD} (1.5,4.5) node{00} (2.5,4.5) node{01} (3.5,4.5) node{11} (4.5,4.5) node{10}
+(0.5,3.5) node{00} (0.5,2.5) node{01} (0.5,1.5) node{11} (0.5,0.5) node{10}
 (1.5,3.5) node{1} (1.5,2.5) node{1} (1.5,1.5) node{1} (1.5,0.5) node{1}
 (2.5,3.5) node{0} (2.5,2.5) node{0} (2.5,1.5) node{0} (2.5,0.5) node{0}
 (3.5,3.5) node{0} (3.5,2.5) node{1} (3.5,1.5) node{0} (3.5,0.5) node{0}
@@ -33,8 +33,10 @@ $$
 (1.9,1.1) node{8} (2.9,1.1) node{9} (3.8,1.1) node{10} (4.8,1.1) node{11}
 (1.8,0.1) node{12} (2.8,0.1) node{13} (3.8,0.1) node{14} (4.8,0.1) node{15};
 
-\draw[thin,->] (-0.2,4) -- (-0.2,1) node[left]{AB};
-\draw[thin,->] (1,5.2) -- (4,5.2) node[right]{CD};
+\draw[thin,->] (-0.2,3) -- (-0.2,1) node[left]{A};
+\draw[thin,->] (2,5.2) -- (4,5.2) node[right]{C};
+\draw[thin,->] (-0.4,2) -- (-0.4,0) node[left]{B};
+\draw[thin,->] (3,5.4) -- (5,5.4) node[right]{D};
 
 \end{tikzpicture}
 
