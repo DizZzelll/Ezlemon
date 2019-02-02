@@ -24,10 +24,10 @@
 \draw[thin,<->] (11,0) arc(0:135:11) node[midway,right,above right] {$\Theta=135^\circ$};
 
 \draw[thin,dashed,->] (0,0) -- (0,{10*sin(90)});
-\draw[thin,black,dashed] ({10*cos(\alfa)},{10*sin(\alfa)}) -- ({-3*cos(\alfa)},{10*sin(\alfa)});
+\draw[thin,black,dashed] ({10*cos(\alfa)},{10*sin(\alfa)}) -- (0,{10*sin(\alfa)});
 
 \draw[thin,dashed] ({10*cos(\alfa)},{10*sin(\alfa)}) -- ({10*cos(\teta)},{10*sin(\teta)});
-\draw[black] (-3,{10*sin(\alfa)}) node {$y^1$};
+\draw[black] (-0.3,{10*sin(\alfa)}) node {$y^1$};
 
 \draw[thin,black,dashed] ({10*cos(\alfa)},{10*sin(\alfa)}) -- ({10*cos(\alfa)},0);
 \draw[black] (3.5,4.8) node {$y_1$};
@@ -36,6 +36,9 @@
 \draw[black,thin,->] (0,0) -- ({10*cos(40)},{-10*sin(45)});
 
 \draw[thin,black,dashed] ({10*cos(\alfa)},{10*sin(\alfa)}) -- (0,{-10*sin(60)});
+
+\draw[thin,black,dashed] ({10*cos(\alfa)},{10*sin(\alfa)}) -- ({10*cos(\alfa)-cos(\teta)},0);
+
 
 \draw[black] (4,-3) node {\rotatebox{330}{$x_2$}};
 \end{tikzpicture}
